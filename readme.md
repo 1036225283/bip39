@@ -1,10 +1,10 @@
 # EOS 助记词生成私钥工具 (BIP39/44 标准)
-`Forked by https://github.com/iancoleman/bip39`
+`Forked from https://github.com/iancoleman/bip39`
 
 **只是在 [iancoleman/bip39](https://github.com/iancoleman/bip39 ) 的基础上，新增了 EOS 币种**
 
 # 使用方式
-1. 下载项目中的 bip39-standalone.html
+1. 下载项目中的 **bip39-standalone.html**
 2. 双击用浏览器打开。可以断网离线使用(如果不放心)
 3. 『BIP39 Mnemonic』 填入助记词，『Coin』 类型选择 EOS-EOS
 
@@ -25,6 +25,10 @@
 
 # 感谢
 https://github.com/iancoleman/bip39 作者
+
+
+
+
 
 --------
 
