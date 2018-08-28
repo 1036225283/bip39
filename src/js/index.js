@@ -1921,6 +1921,13 @@
                 setHdCoin(60);
             },
         },
+	    {
+		    name: "EOS - EOS",
+		    onSelect: function() {
+			    network = bitcoinjs.bitcoin.networks.eos;
+			    setHdCoin(194);
+		    },
+	    },
         {
             name: "EXCL - Exclusivecoin",
             onSelect: function() {

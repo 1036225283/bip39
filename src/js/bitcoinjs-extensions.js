@@ -628,14 +628,24 @@ bitcoinjs.bitcoin.networks.europecoin = {
 };
 
 bitcoinjs.bitcoin.networks.exclusivecoin = {
-  messagePrefix: '\x18ExclusiveCoin Signed Message:\n',
-  bip32: {
-    public: 0x0488B21E,
-    private: 0x0488ADE4,
-  },
-  pubKeyHash: 0x21,
-  scriptHash: 0x89,
-  wif: 0xa1,
+	messagePrefix: '\x18ExclusiveCoin Signed Message:\n',
+	bip32: {
+		public: 0x0488B21E,
+		private: 0x0488ADE4,
+	},
+	pubKeyHash: 0x21,
+	scriptHash: 0x89,
+	wif: 0xa1,
+};
+bitcoinjs.bitcoin.networks.eos = {
+	messagePrefix: '\x18EOS Signed Message:\n',
+	bip32: {
+		public: 0x0488B21E,
+		private: 0x0488ADE4,
+	},
+	pubKeyHash: 0x21,
+	scriptHash: 0x89,
+	wif: 0x80,
 };
 
 bitcoinjs.bitcoin.networks.feathercoin = {
