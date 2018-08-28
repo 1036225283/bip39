@@ -1,3 +1,34 @@
+# BIP39/44 EOS 助记词生成私钥工具
+`Forked by https://github.com/iancoleman/bip39`
+
+**只是在 https://github.com/iancoleman/bip39 的基础上，新增了 EOS 币种**
+
+# 使用方式
+1. 下载项目中的 bip39-standalone.html
+2. 双击用浏览器打开，可以断网离线使用
+3. 『BIP39 Mnemonic』 填入助记词，『Coin』 类型选择 EOS-EOS
+
+![](./pic/1.png)
+
+4. 在下方 Private Key 即可获得主路径的 EOS 私钥
+
+![](./pic/2.png)
+
+# 为什么要加入 EOS 币种？
+为了做 EOS 合约开发，用了[番茄钱包](https://tomatowallet.cn) ，无奈官方为了小白用户的私钥安全，只支持助记词导出。
+研究了一下他们助记词->私钥的逻辑，其实就是把 coinID 置为 EOS 的 ID，各种谷歌之后得知 EOS 的 ID 是194，就改进了一下这个小工具，让它支持 EOS 币种了
+
+
+
+# 感谢
+https://github.com/iancoleman/bip39 作者
+
+
+
+# 以下是项目原 README
+
+--------
+
 # BIP39 Tool
 
 A tool for converting BIP39 mnemonic phrases to addresses and private keys.
