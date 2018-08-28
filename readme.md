@@ -1,7 +1,7 @@
-# BIP39/44 EOS 助记词生成私钥工具
+# EOS 助记词生成私钥工具 (BIP39/44 标准)
 `Forked by https://github.com/iancoleman/bip39`
 
-**只是在 https://github.com/iancoleman/bip39 的基础上，新增了 EOS 币种**
+**只是在 [iancoleman/bip39](https://github.com/iancoleman/bip39 ) 的基础上，新增了 EOS 币种**
 
 # 使用方式
 1. 下载项目中的 bip39-standalone.html
@@ -23,9 +23,9 @@
 # 感谢
 https://github.com/iancoleman/bip39 作者
 
+--------
 
-
-# 以下是项目原 README
+## 以下是项目原 README
 
 --------
 
