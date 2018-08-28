@@ -628,14 +628,14 @@ bitcoinjs.bitcoin.networks.europecoin = {
 };
 
 bitcoinjs.bitcoin.networks.exclusivecoin = {
-	messagePrefix: '\x18ExclusiveCoin Signed Message:\n',
-	bip32: {
-		public: 0x0488B21E,
-		private: 0x0488ADE4,
-	},
-	pubKeyHash: 0x21,
-	scriptHash: 0x89,
-	wif: 0xa1,
+  messagePrefix: '\x18ExclusiveCoin Signed Message:\n',
+  bip32: {
+    public: 0x0488B21E,
+    private: 0x0488ADE4,
+  },
+  pubKeyHash: 0x21,
+  scriptHash: 0x89,
+  wif: 0xa1,
 };
 bitcoinjs.bitcoin.networks.eos = {
 	messagePrefix: '\x18EOS Signed Message:\n',
@@ -1033,15 +1033,6 @@ bitcoinjs.bitcoin.networks.rubycoin = {
   wif: 0xbc,
 };
 
-messagePrefix: '\x18Salus Signed Message:\n',
-bip32: {
-  public: 0x0488B21E,
-  private: 0x0488ADE4,
-},
-pubKeyHash: 0x3f,
-scriptHash: 0xc4,
-wif: 0xbf,
-};
 
 bitcoinjs.bitcoin.networks.smileycoin = {
   messagePrefix: '\x18Smileycoin Signed Message:\n',
