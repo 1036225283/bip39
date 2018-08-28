@@ -4,8 +4,8 @@
 **只是在 [iancoleman/bip39](https://github.com/iancoleman/bip39 ) 的基础上，新增了 EOS 币种**
 
 # 使用方式
-1. 下载项目中的 **bip39-standalone.html**
-2. 双击用浏览器打开。可以断网离线使用(如果不放心)
+1. 访问在线版：[bip39-standalone.html](https://static.zhusun.in/bip39-standalone.html) 如果担心安全问题可以下载项目中的 **bip39-standalone.html** 文件离线使用
+2. 双击用浏览器打开。可以直接断网离线使用(如果不放心)
 3. 『BIP39 Mnemonic』 填入助记词，『Coin』 类型选择 EOS-EOS
 
 ![](./pic/1.png)
