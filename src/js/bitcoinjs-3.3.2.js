@@ -9526,7 +9526,7 @@ HDNode.fromBase58 = function (string, networks) {
 
   return hd
 }
-
+HDNode.base58check = base58check
 HDNode.prototype.getAddress = function () {
   return this.keyPair.getAddress()
 }

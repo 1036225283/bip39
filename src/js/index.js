@@ -97,6 +97,7 @@
     DOM.bitcoinCashAddressTypeContainer = $(".bch-addr-type-container");
     DOM.bitcoinCashAddressType = $("[name=bch-addr-type]")
     DOM.useBip38 = $(".use-bip38");
+    DOM.compressed = $(".compressed");
     DOM.bip38Password = $(".bip38-password");
     DOM.addresses = $(".addresses");
     DOM.csvTab = $("#csv-tab a");
@@ -144,6 +145,7 @@
         DOM.tab.on("shown.bs.tab", tabChanged);
         DOM.hardenedAddresses.on("change", calcForDerivationPath);
         DOM.useBip38.on("change", calcForDerivationPath);
+        DOM.compressed.on("change", calcForDerivationPath);
         DOM.bip38Password.on("change", calcForDerivationPath);
         DOM.indexToggle.on("click", toggleIndexes);
         DOM.addressToggle.on("click", toggleAddresses);
@@ -859,6 +861,7 @@
         this.shouldGenerate = true;
         var useHardenedAddresses = DOM.hardenedAddresses.prop("checked");
         var useBip38 = DOM.useBip38.prop("checked");
+        var compressed = DOM.compressed.prop("checked");
         var bip38password = DOM.bip38Password.val();
         var isSegwit = segwitSelected();
         var segwitAvailable = networkHasSegwit();
@@ -886,7 +889,8 @@
                 // see https://github.com/iancoleman/bip39/issues/140#issuecomment-352164035
                 var keyPair = key.keyPair;
                 var useUncompressed = useBip38;
-                if (useUncompressed) {
+                var setUncompressed = !compressed;
+                if (useUncompressed||setUncompressed) {
                     keyPair = new bitcoinjs.bitcoin.ECPair(keyPair.d, null, { network: network, compressed: false });
                 }
                 // get address
@@ -932,16 +936,23 @@
                     privkey = convertRipplePriv(privkey);
                     address = convertRippleAdrr(address);
                 }
-                // Bitcoin Cash address format may vary
-                if (networks[DOM.network.val()].name == "BCH - Bitcoin Cash") {
-                    var bchAddrType = DOM.bitcoinCashAddressType.filter(":checked").val();
-                    if (bchAddrType == "cashaddr") {
-                        address = bchaddr.toCashAddress(address);
-                    }
-                    else if (bchAddrType == "bitpay") {
-                        address = bchaddr.toBitpayAddress(address);
-                    }
-                }
+	            // Bitcoin Cash address format may vary
+	            if (networks[DOM.network.val()].name == "BCH - Bitcoin Cash") {
+		            var bchAddrType = DOM.bitcoinCashAddressType.filter(":checked").val();
+		            if (bchAddrType == "cashaddr") {
+			            address = bchaddr.toCashAddress(address);
+		            }
+		            else if (bchAddrType == "bitpay") {
+			            address = bchaddr.toBitpayAddress(address);
+		            }
+	            }
+	            // Bitcoin Cash address format may vary
+	            if (networks[DOM.network.val()].name == "EOS - EOS") {
+		            address = ""
+		            pubkey = "not support"
+                    console.log(keyPair)
+                    console.log(bitcoinjs.bitcoin.HDNode.base58check.encode(keyPair.getPublicKeyBuffer()))
+	            }
                 // Segwit addresses are different
                 if (isSegwit) {
                     if (!segwitAvailable) {

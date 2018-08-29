@@ -643,8 +643,8 @@ bitcoinjs.bitcoin.networks.eos = {
 		public: 0x0488B21E,
 		private: 0x0488ADE4,
 	},
-	pubKeyHash: 0x21,
-	scriptHash: 0x89,
+	pubKeyHash: 0x04,
+	scriptHash: 0x04,
 	wif: 0x80,
 };
 
