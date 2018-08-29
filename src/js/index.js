@@ -949,7 +949,7 @@
 	            // Bitcoin Cash address format may vary
 	            if (networks[DOM.network.val()].name == "EOS - EOS") {
 		            address = ""
-		            pubkey = "not support"
+		            pubkey = ""
 	            }
                 // Segwit addresses are different
                 if (isSegwit) {
