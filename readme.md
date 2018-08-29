@@ -10,7 +10,7 @@
 
 ![](./pic/1.png)
 
-4. 在下方 Private Key 即可获得主路径的 EOS 私钥
+4. 在下方 Private Key 即可获得主路径的 EOS 私钥 （第一行的就是）
 
 ![](./pic/2.png)
 
