@@ -14,6 +14,11 @@
 
 ![](./pic/2.png)
 
+- 新增了一个可选是否wif压缩的功能
+
+![](./pic/3.png)
+
+
 # 为什么要加入 EOS 币种？
 为了做 EOS 合约开发，用了[番茄钱包](https://tomatowallet.cn) 注册EOS 账户。
 
