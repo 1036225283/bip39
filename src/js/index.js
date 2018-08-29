@@ -950,8 +950,6 @@
 	            if (networks[DOM.network.val()].name == "EOS - EOS") {
 		            address = ""
 		            pubkey = "not support"
-                    console.log(keyPair)
-                    console.log(bitcoinjs.bitcoin.HDNode.base58check.encode(keyPair.getPublicKeyBuffer()))
 	            }
                 // Segwit addresses are different
                 if (isSegwit) {
